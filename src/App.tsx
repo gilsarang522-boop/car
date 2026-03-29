@@ -28,7 +28,7 @@ export default function App() {
       return;
     }
 
-    const scriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
+    const scriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL || "https://script.google.com/macros/s/AKfycbwKln626Fkt9MAgZAnlylpQrpkMDbhlFyrLkpseEO8xF6Xd0smAePbDT5AJuwaLxLRjow/exec";
 
     if (!scriptUrl) {
       alert("시스템 설정 오류: Google Sheets 연동 URL이 설정되지 않았습니다. 관리자에게 문의하세요.");
