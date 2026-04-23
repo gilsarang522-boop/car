@@ -2,52 +2,57 @@
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #f8fafc;
+    color: #111827;
     overflow-x: hidden;
 }
 
 /* 배경 그라데이션 효과 */
 .bg-gradient-blob {
     position: fixed;
-    width: 500px;
-    height: 500px;
-    filter: blur(80px);
+    width: 600px;
+    height: 600px;
+    filter: blur(100px);
     z-index: -1;
-    opacity: 0.4;
+    opacity: 0.5;
     border-radius: 50%;
 }
-.blob-blue { background: #3b82f6; top: -100px; right: -100px; }
-.blob-purple { background: #a855f7; bottom: -100px; left: -100px; }
+.blob-blue { background: #93c5fd; top: -100px; right: -100px; }
+.blob-purple { background: #d8b4fe; bottom: -100px; left: -100px; }
 
-/* 글래스모피즘 카드 스타일 */
+/* 밝은 테마 글래스모피즘 카드 스타일 */
 .glass-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
 }
 
 /* 입력창 커스텀 */
 .input-field {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: #ffffff;
+    border: 2px solid #d1d5db;
+    color: #111827;
     transition: all 0.3s ease;
+}
+.input-field::placeholder {
+    color: #9ca3af;
 }
 .input-field:focus {
     outline: none;
     border-color: #3b82f6;
-    background: rgba(255, 255, 255, 0.12);
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
 }
 
 /* 제출 버튼 */
 .btn-submit {
-    background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #9333ea 100%);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.btn-submit:hover {
+.btn-submit:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
 }
